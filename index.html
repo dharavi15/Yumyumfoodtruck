@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yum Yum Gim Me Sum</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="receipt.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header  id="headerid"class="header active">
+
+    </header>
+    
+     <!-- Menu Page -->
+     <main id="menu-page" class="page active">
+        
+        <nav class="navbar">
+            <h1>MENY</h1>
+            <button class="cart-button" id="navigateToCartPage"><span id="cart-count">0</span>
+                <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <rect x="3" y="3" width="64" height="64" rx="8" fill="#F4F3F1" fill-opacity=".94"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.505 18a9 9 0 0 0-9 9v1.617H20a4 4 0 0 0-3.96 4.568l1.74 12.108a4 4 0 0 0 3.96 3.43h20.51a4 4 0 0 0 3.959-3.43l1.74-12.108a4 4 0 0 0-3.96-4.568h-.504V27a9 9 0 0 0-9-9h-4.981Zm11.981 10.617V27a7 7 0 0 0-7-7h-4.981a7 7 0 0 0-7 7v1.617h18.981Zm-21.485 2h23.99A2 2 0 0 1 45.97 32.9l-1.74 12.107a2 2 0 0 1-1.98 1.716H21.74a2 2 0 0 1-1.98-1.716l-1.739-12.107a2 2 0 0 1 1.98-2.284Z" fill="#353131"/>
+                </svg>
+            </button>
+        </nav>
+        <template id="menu-section-template">
+            <div class="dips-section-container">
+            <div class="menu-section">
+                <h2 class="menu-section-title"></h2>
+                <div class="t">
+                <h5 class="dip-section-title"></h5>
+                </div>
+                <div class="menu-section-items"></div>
+            </div>
+        </template>
+
+        <div id="menu-container"></div>
+        <template id="wonton-item-template">
+            <div class="wonton-item">
+                <div class="witem"> 
+                <h3 class="wonton-item-name" id="name"></h3>
+                <h3>...................................</h3>
+                <h3 class="wonton-item-price" id="price"></h3>
+                </div>
+                <p class="wonton-item-ingredients"></p>
+            </div>
+        </template>
+        
+        <div class="dips-section-container">
+        <!-- Template for Dips and Drinks -->
+        <template id="dip-drink-item-template">
+            <div class="dip-drink-item">
+                <h4 class="dip-drink-item-name"></h4>
+            </div>
+        </template>
+    
+    </main>
+
+        <section id="cart" class="hidden">
+          <div id ="cpage">
+            <div id="cart-page">
+                <!-- Cart Content -->
+            </div>
+            <div class="cimage"> 
+                <svg    width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="position: absolute; top: 0; right: 0; margin: 20px;">
+                    <rect x="3" y="3" width="64" height="64" rx="8" fill="#F4F3F1" fill-opacity=".94"/>
+                    <a href="index.html"><path fill-rule="evenodd" clip-rule="evenodd" d="M29.505 18a9 9 0 0 0-9 9v1.617H20a4 4 0 0 0-3.96 4.568l1.74 12.108a4 4 0 0 0 3.96 3.43h20.51a4 4 0 0 0 3.959-3.43l1.74-12.108a4 4 0 0 0-3.96-4.568h-.504V27a9 9 0 0 0-9-9h-4.981Zm11.981 10.617V27a7 7 0 0 0-7-7h-4.981a7 7 0 0 0-7 7v1.617h18.981Zm-21.485 2h23.99A2 2 0 0 1 45.97 32.9l-1.74 12.107a2 2 0 0 1-1.98 1.716H21.74a2 2 0 0 1-1.98-1.716l-1.739-12.107a2 2 0 0 1 1.98-2.284Z" fill="#353131"/></a>
+                </svg>
+                
+                </div>
+
+            <!--</button> -->
+            <div id="cart-items-container"></div>
+            <p id="cart-total"></p>
+            <button id="checkout-button">TAKE MY MONEY!</button>
+        </div>
+        </section>
+        
+        <template id="cart-item-template">
+            <div class="cart-item">
+                <!-- Header: Name and Price on the same line -->
+                <div class="cart-item-header">
+                    <span class="cart-item-name"></span>
+                    <span class="cart-item-total"></span>
+                </div>
+                <!-- Actions: Increase, Decrease buttons under the name -->
+                <div class="cart-item-actions">
+                    <button class="decrease-button">-</button>
+                    <span class="cart-item-quantity"></span>
+                    <button class="increase-button">+</button>
+                </div>
+            </div>
+            </template>
+        <section class="finalorder"id="order-page"> 
+            
+
+        <div class="container" >
+        <img src="boxtop.jpg" alt="YUM YUM GIM MI SUM logo" class="logo" >
+           <h2 class="lastpage-header" >DINA WONTON TILLAGAS!</h2>
+            <p id="order-id" class="hidden"><strong>Order ID:</strong> <span id="order-id-value"></span></p>
+            <p id="order-eta" class="hidden"><strong>ETA:</strong> <span id="order-eta-value"></span></p>
+            <div class="lastpage-button-container">
+            <button class="lastpage-buttons receipt">SE KVITTO</button>
+            <button class="lastpage-buttons new-order" id="new-order-button">GÖR EN NY BESTÄLLNING</button>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

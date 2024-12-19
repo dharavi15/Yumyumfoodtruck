@@ -1,0 +1,144 @@
+.cart-item {
+    padding: 10px 0;
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #ddd;
+ }
+
+.cimage{
+    padding-top: 90px; 
+    background-color: #EEEEEE;
+}
+.cart-item:last-child {
+    margin-bottom: 0; 
+    border-bottom: none; 
+}
+
+.hidden {
+    display: none !important;
+}
+
+.cart-item-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #333; 
+    position: relative; 
+}
+
+.cart-item-header::after {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0;
+    right: 0;
+    height: 1px; 
+    border-bottom: 2px dotted #777;
+    z-index: 0;
+}
+
+.cart-item-header span {
+    background: #EEEEEE; 
+    position: relative; 
+    z-index: 1; 
+    padding: 0 5px; 
+}
+
+.cart-item-actions {
+        display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 2%; 
+    margin-bottom: 0;
+}
+.cart-item-actions button {
+    background-color:#3531313D; 
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.cart-item-actions button:hover {
+    background-color: #bbb; 
+}
+
+.cart-item-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555; 
+}
+
+.cart-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #EEEEEE;
+    margin: 2%;
+}
+
+.cart-item-name {
+    display: flex;
+    flex-direction: column; 
+    background-color: #EEEEEE;
+   
+}
+
+.cart-item-name span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+}
+
+#cart-total {
+    justify-content: space-between; 
+    background-color: #3531313D;
+    padding: 5px ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    border-top: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-left: 8px;
+    }
+
+#cart-total::after{
+    content: "inkl 20% moms";
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+    margin-top: 5px
+}
+
+/* Take My Money Button */
+#checkout-button {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 97%;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+
+#checkout-button:hover {
+    background-color: #555;
+}

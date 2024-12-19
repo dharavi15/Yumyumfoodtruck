@@ -1,0 +1,196 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #353131;
+}
+
+h3{
+    color: white;
+}
+.dip-section-title{
+  color: #fff;
+  margin-left: 10px;
+}
+
+main{
+    background-color: #489078;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #489078;
+    color: #fff;
+    padding: 10px 20px;
+   
+    top: 0;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+   margin-top: 60px;
+}
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-button svg {
+    width: 40px;
+    height: 40px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff4b4b;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menu Container */
+#menu-container {
+    padding: 10px;
+}
+
+/* Section Titles */
+.menu-section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.witem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 5px 0;
+}
+
+.wonton-item:hover{
+    background-color: #353131;
+}
+
+.dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted black; 
+    margin: 0 10px; 
+    height: 0;
+}
+
+/* Menu Items */
+.wonton-item, .dip-drink-item {
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 10px;
+    max-width: 800px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.dip-drink-item:hover {
+    background-color: #353131;
+}
+
+.dip-drink-item {
+    margin-bottom: 15px;
+    margin-left: 6px;
+    margin-right: 8px;
+}
+
+.menu-item h3, .wonton-item h3, .dip-drink-item h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.menu-item-ingredients, .wonton-item-ingredients {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 5px 0 0;
+}
+
+.menu-item-price, .wonton-item-price,.wonton-item-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-section-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Dip and Drink Styling */
+.dip-drink-item {
+    background-color: #605858;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+/* Section Group Styling */
+.wonton-item {
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.dip-drink-item-name {
+    margin: 0;
+}
+
+.dips-section-container{
+    background-color: #807979; 
+    border-radius: 8px;
+   }
+
+/* Item Header: Name, Dotted Line, Price */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-header::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px dotted white;
+    z-index: 0;
+    height: 0;
+}
+
+.item-header span {
+    background-color: #605858; 
+    z-index: 1;
+    padding: 0 5px;
+}
